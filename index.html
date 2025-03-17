@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of Clans</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(Clash-of-Clans-chino.jpg);
+        }
+        .hi{
+            width: fit-content;
+        }
+        @keyframes glowAnimation {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(248, 6, 6, 0.948);
+                transform: scale(1);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(246, 5, 5, 0.946);
+                transform: scale(1.05);
+            }
+        }
+        @keyframes shimmerAnimation {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+        @keyframes stompAnimation {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        .animated-title {
+            animation: glowAnimation 2s infinite ease-in-out, 
+                       shimmerAnimation 3s linear infinite;
+            background: linear-gradient(to right, 
+                #ff0707 0%, 
+                #ffffff 50%, 
+                #f60505 100%);
+            background-size: 1000px 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .stomp-container {
+            animation: stompAnimation 0.5s infinite alternate;
+            transform-origin: bottom center;
+        }
+        .download-btn {
+            padding: 10px 20px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #ffffff80;
+            text-shadow: none;
+            background: transparent;
+            cursor: pointer;
+            box-shadow: transparent;
+            border: 1px solid #ffffff80;
+            transition: 0.5s ease;
+            user-select: none;
+        }
+        
+        .download-btn:hover,
+        .download-btn:focus {
+            color: #ffffff;
+            background: #008cff;
+            border: 1px solid #008cff;
+            text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+            box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+                0 0 100px #008cff;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <div class="stomp-container">
+                <h1 class="text-5xl font-bold animated-title mb-4">Clash of Clans</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="bg-white shadow-lg rounded-lg p-8 mb-8">
+                <h2 class="text-3xl font-semibold text-red-600 mb-6">About the Game</h2>
+                <div class="grid md:grid-cols-2 gap-6 items-center">
+                    <div>
+                        <p class="text-gray-700 mb-4">
+                            Clash of Clans is a popular mobile strategy game developed by Supercell. <br>
+        In the game, players build and upgrade their villages by collecting resources like gold, elixir, and dark elixir. <br>
+        They train armies of different troops, such as barbarians, archers, and wizards, to attack other players' bases and earn trophies, resources, and stars.<br>
+        Players can join clans to participate in Clan Wars, Clan Games, and special events, which promote teamwork and strategic planning. <br>
+        The game also features various defensive buildings like cannons, archer towers, and walls to protect the village from enemy attacks.<br>
+        With regular updates introducing new troops, buildings, and challenges, Clash of Clans remains one of the most engaging and strategic mobile games worldwide.<br>
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li>Build and customize your own village</li>
+                            <li>Train unique troops and powerful heroes</li>
+                            <li>Join a clan and participate in epic Clan Wars</li>
+                            <li>Attack other players and climb the leaderboards</li>
+                            <li>Unlock new strategies and upgrade your defenses</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <img src="images (1).jpeg" alt="Clash of Clans Gameplay" >
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-center bg-gray-800 py-8 rounded-lg">
+                <h2 class="text-3xl font-semibold text-white mb-8">Download Now</h2>
+                <div class="flex flex-wrap justify-center space-x-4 space-y-4 sm:space-y-0">
+                    <a href="https://play.google.com/store/apps/details?id=com.supercell.clashofclans" target="_blank" class="download-btn">
+                        Google Play Store
+                    </a>
+                    <a href="https://apps.apple.com/us/app/clash-of-clans/id529479190" target="_blank" class="download-btn">
+                        App Store
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 text-red-500">
+            <p>© 2024 Supercell. Clash of Clans is a trademark of Supercell Oy.</p>
+        </footer>
+    </div>
+</body>
+</html>
